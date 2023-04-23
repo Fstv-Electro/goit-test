@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/goit-test/static/css/main.7acaea2f.css",
-    "main.js": "/goit-test/static/js/main.07d3183d.js",
+    "main.css": "/goit-test/static/css/main.6520b49c.css",
+    "main.js": "/goit-test/static/js/main.b0c223df.js",
+    "static/media/Montserrat-Regular.ttf": "/goit-test/static/media/Montserrat-Regular.94bb495fba6077f669ed.ttf",
+    "static/media/bgdtop.png": "/goit-test/static/media/bgdtop.b3d9942b3f9d5dad1ff0.png",
+    "static/media/Logo.svg": "/goit-test/static/media/Logo.e917114d7945c04c85a8946a331d28b6.svg",
     "index.html": "/goit-test/index.html",
-    "main.7acaea2f.css.map": "/goit-test/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/goit-test/static/js/main.07d3183d.js.map"
+    "main.6520b49c.css.map": "/goit-test/static/css/main.6520b49c.css.map",
+    "main.b0c223df.js.map": "/goit-test/static/js/main.b0c223df.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.6520b49c.css",
+    "static/js/main.b0c223df.js"
   ]
 }
