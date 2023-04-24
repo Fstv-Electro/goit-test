@@ -1,6 +1,6 @@
 import { Btn } from "./BtnFollowers.styled"
 
-export const BtnFollowers = ({isFollow, handleClick}) => {
+export const BtnFollowers = ({ isFollow, handleClick }) => {
     return (
         <Btn
             onClick={handleClick}

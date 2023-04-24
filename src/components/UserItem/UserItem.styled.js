@@ -1,14 +1,13 @@
 import styled from '@emotion/styled';
 import bgdtop from '../../image/bgdtop.png';
 
-export const Container = styled.div`
+export const Container = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 460px;
   z-index: 1;
-  gap: 16px;
   border-radius: 20px;
   background: linear-gradient(
     114.99deg,
@@ -26,12 +25,13 @@ export const TopContainer = styled.div`
   background-size: 308px 168px;
   width: 380px;
   height: 214px;
-  padding: 20px 20px;
+  padding: 20px 0;
 `;
 
 export const LogoHead = styled.img`
   width: 76px;
   height: 22px;
+  margin-left: 20px;
 `;
 
 export const Avatar = styled.div`

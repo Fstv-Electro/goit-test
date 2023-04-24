@@ -1,5 +1,5 @@
-import { fetchAllUsers } from "service/API"
-import { useState } from "react";
+import { fetchAllUsers } from "service/API";
+import { useState, useEffect } from "react";
 import {
     Container,
     TopContainer,
@@ -13,30 +13,17 @@ import {
 import { BtnFollowers } from "components/BtnFollowers/BtnFollowers";
 import Logo from '../../image/Logo.svg';
 
-export const UserItem = () => {
-    const [user, setUser] = useState('');
-    const [userTweets, setUserTweets] = useState(0);
-    const [userAvatar, setUserAvatar] = useState('');
-    const [userFollowers, setUserFollowers] = useState(0);
-    const [isFollow, setIsFollow] = useState(false);
+export const UserItem = ({user, tweets, avatar, id, followers }) => {
+    const [isFollow, setIsFollow] = useState(JSON.parse(localStorage.getItem(id)) || false);
 
-    fetchAllUsers().then(res => {
-        setUser(res[0].user);
-        setUserTweets(res[0].tweets);
-        setUserAvatar(res[0].avatar);
-        setUserFollowers(res[0].followers);
+    useEffect(() => {
+        localStorage.setItem(id, isFollow);
+    }, [isFollow]);
 
-    });
-    console.log(user);
-    console.log(userTweets);
-    console.log(userAvatar);
-    console.log(userFollowers);
     
-
-    function handleClick() {
+    function handleFollow() {
         setIsFollow(!isFollow);
     };
-
 
     return (
         <Container>
@@ -45,13 +32,13 @@ export const UserItem = () => {
             </TopContainer>
             <Border>
                 <AvatarContainer>
-                    <Avatar avatar={userAvatar} />
+                    <Avatar avatar={avatar} />
                 </AvatarContainer>
             </Border>
             <BottomContainer>
-                <InfoText style={{marginBottom: 16, marginTop: 62}}>{userTweets} tweets</InfoText>
-                <InfoText style={{marginBottom: 26, marginTop: 0}}>{userFollowers} followers</InfoText>
-                <BtnFollowers handleClick={handleClick} isFollow={isFollow} />
+                <InfoText style={{marginBottom: 16, marginTop: 62}}>{tweets} tweets</InfoText>
+                <InfoText style={{marginBottom: 26, marginTop: 0}}>{isFollow ? followers + 1 : followers} followers</InfoText>
+                    <BtnFollowers handleClick={handleFollow} isFollow={isFollow} />
             </BottomContainer>
         </Container>
     );

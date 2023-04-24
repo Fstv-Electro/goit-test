@@ -1,10 +1,10 @@
 import { Container } from "./App.styled";
-import { UserItem } from "./UserItem/UserItem";
+import { UserList } from "./UserItemList/UserItemList";
 
 export const App = () => {
   return (
     <Container>
-      <UserItem/>
+      <UserList/>
     </Container>
   );
 };
