@@ -17,7 +17,7 @@ export const UserItem = ({user, tweets, avatar, id, followers }) => {
 
     useEffect(() => {
         localStorage.setItem(id, isFollow);
-    }, [isFollow]);
+    }, [id, isFollow]);
 
     
     function handleFollow() {
