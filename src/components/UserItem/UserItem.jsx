@@ -1,4 +1,3 @@
-import { fetchAllUsers } from "service/API";
 import { useState, useEffect } from "react";
 import {
     Container,
