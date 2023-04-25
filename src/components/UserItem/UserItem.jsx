@@ -19,6 +19,9 @@ export const UserItem = ({user, tweets, avatar, id, followers }) => {
         localStorage.setItem(id, isFollow);
     }, [id, isFollow]);
 
+    function formatFollowers(num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    };
     
     function handleFollow() {
         setIsFollow(!isFollow);
@@ -36,7 +39,7 @@ export const UserItem = ({user, tweets, avatar, id, followers }) => {
             </Border>
             <BottomContainer>
                 <InfoText style={{marginBottom: 16, marginTop: 62}}>{tweets} tweets</InfoText>
-                <InfoText style={{marginBottom: 26, marginTop: 0}}>{isFollow ? followers + 1 : followers} followers</InfoText>
+                <InfoText style={{marginBottom: 26, marginTop: 0}}>{isFollow ? formatFollowers(followers + 1) : formatFollowers(followers)} followers</InfoText>
                     <BtnFollowers handleClick={handleFollow} isFollow={isFollow} />
             </BottomContainer>
         </Container>

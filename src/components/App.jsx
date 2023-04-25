@@ -1,10 +1,12 @@
-import { Container } from "./App.styled";
+import { Container, Section } from "./App.styled";
 import { UserList } from "./UserItemList/UserItemList";
 
 export const App = () => {
   return (
     <Container>
-      <UserList/>
+      <Section>
+        <UserList/>
+      </Section>
     </Container>
   );
 };

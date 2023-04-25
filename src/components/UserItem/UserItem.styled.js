@@ -6,6 +6,8 @@ export const Container = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   height: 460px;
   z-index: 1;
   border-radius: 20px;
