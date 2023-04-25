@@ -16,7 +16,15 @@ export const UserList = ({filter}) => {
 
     }, []);
 
-    const followsFilter = userData.filter(user => localStorage.getItem(user.id) === 'false');
+    function firstRender() {
+        const userCount = userData.length;
+        if (localStorage.getItem(userCount) === null) {
+            return userData;
+        }
+        return userData.filter(user => localStorage.getItem(user.id) === 'false');
+    };
+
+    const followsFilter = firstRender();
     const followingsFilter = userData.filter(user => JSON.parse(localStorage.getItem(user.id)));
 
     function onLoadMore() {
