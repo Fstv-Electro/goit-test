@@ -9,7 +9,7 @@ export const Container = styled.li`
   margin-left: auto;
   margin-right: auto;
   height: 460px;
-  z-index: 1;
+  z-index: 0;
   border-radius: 20px;
   background: linear-gradient(
     114.99deg,
