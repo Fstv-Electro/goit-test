@@ -24,8 +24,11 @@ export const UserList = ({filter}) => {
         return userData.filter(user => localStorage.getItem(user.id) === 'false');
     };
 
-    const followsFilter = firstRender();
-    const followingsFilter = userData.filter(user => JSON.parse(localStorage.getItem(user.id)));
+    firstRender();
+
+    function followingsFilter() {
+        return userData.filter(user => JSON.parse(localStorage.getItem(user.id)));
+    };
 
     function onLoadMore() {
         setUserNumber(prevState => prevState + 3);
@@ -35,7 +38,7 @@ export const UserList = ({filter}) => {
         <List>
             {filter.value === 'all' ?
                 (
-                    userData.slice(0, userNumber).map(({user, id, followers, tweets, avatar}) => {
+                    userData.slice(0, userNumber).map(({ user, id, followers, tweets, avatar }) => {
                     return (
                         <UserItem key={id} user={user} id={id} followers={followers} tweets={tweets} avatar={avatar} />
                 )
@@ -43,13 +46,13 @@ export const UserList = ({filter}) => {
                 ) : (
                     filter.value === 'follows' ?
                         (
-                            followsFilter.slice(0, userNumber).map(({user, id, followers, tweets, avatar}) => {
+                            firstRender().slice(0, userNumber).map(({user, id, followers, tweets, avatar}) => {
                     return (
                         <UserItem key={id} user={user} id={id} followers={followers} tweets={tweets} avatar={avatar} />
                 )
                 })
                         ) : (
-                                followingsFilter.slice(0, userNumber).map(({user, id, followers, tweets, avatar}) => {
+                                followingsFilter().slice(0, userNumber).map(({user, id, followers, tweets, avatar}) => {
                     return (
                         <UserItem key={id} user={user} id={id} followers={followers} tweets={tweets} avatar={avatar} />
                 )
