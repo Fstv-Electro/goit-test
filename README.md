@@ -1,81 +1,95 @@
 # React homework template
 
-Цей проєкт був створений за допомогою
+This project was created with
 [Create React App](https://github.com/facebook/create-react-app). [mockapo.io]
-(https://mockapi.io/). Backend [@emotion/styled]
-(https://emotion.sh/docs/styled). Стилізація [axios] (https://axios-http.com/).
-HTTP-клієнт
+(https://mockapi.io/) Backend. [@emotion/styled]
+(https://emotion.sh/docs/styled) stylization. [axios] (https://axios-http.com/)
+HTTP-клієнт.
 
-Шаблон збірки взятий від школи [GoIT] (https://m.goit.global/ua/new/) з
-репозиторія [Олександра Репети]
+The assembly template is taken from the [GoIT] (https://m.goit.global/ua/new/)
+school with repository [Olexandr Repeta]
 (https://github.com/goitacademy/react-homework-template#readme)
 
-# Тестове завдання
+# Briefly about the process and what was created
 
-Мета: створити картки твітів та додати інтерактивності при клікові на кнопку.
+1. The general task was performed according to the requirements of the technical
+   task.
+2. Checked by the validator for errors.
+3. The value of "Followers" is changed on the backend, due to the fact that the
+   application does not have authorization.
+4. I did not start the additional task with routing, due to lack of sufficient
+   time, but in time I will.
+5. Dropdown was taken from "react-select" for convenience, as for the first
+   acquaintance and easy transfer of filter data.
+
+# Test task
+
+Goal: Create tweet cards and add interactivity at the click of a button.
 (https://textbook.edu.goit.global/lms-career-homework/uk/img/image-1.jpg)
 
-Загальний вигляд картки у двох станах - Follow та Following
+The general appearance of the card in two states - Follow and Following.
 
-# Критерії виконання
+# Performance criteria
 
-1. Верстка фіксована в рх, семантична та валідна.
-2. Немає помилок в консолі браузера.
-3. Робота виконана на нативному JS з використанням зборщиків або на React.
-4. Інтерактивність працює відповідно до технічного завдання.
-5. Код відформатований та без коментарів.
-6. В репозиторії має бути описаний README.md.
+1. The layout is fixed in rh, semantic and valid.
+2. There are no errors in the browser console.
+3. The work is done on native JS using assemblers or on React.
+4. Interactivity works according to the technical task.
+5. The code is formatted and uncommented.
+6. A README.md should be described in the repository.
 
-# Технічне завдання
+# Technical task
 
-1. Відповідно до [макету]
-   (https://www.figma.com/file/zun1oP6NmS2Lmgbcj6e1IG/Test?node-id=0-1) потрібно
-   реалізувати картки юзера.
-2. При клікові на кнопку Follow - текст змінюється на Following. Також
-   змінюється колір кнопки. А до кількості фоловерів додається і ваш. Тобто,
-   початкова кількість складає 100,500 фоловерів. При клікові на кнопку буде
-   100,501.
-3. При оновлені сторінки має фіксуватись кінцевий результат дій юзера. Тобто,
-   якщо клікнути по кнопці і оновити сторінку - то кнопка все рівно залишається
-   в стані Following із відповідним кольором, а кількість фоловерів НЕ
-   зменшується до початкового значення.
-4. При повторному клікові на кнопку її текст та колір змінюються до початкового
-   стану. Також змінюється і кількість фоловерів. Вона зменшується на 1
-   (100,500).
-5. В коді цифра 100,500 має бути прописана одним значенням (100500). В UI -
-   виведено через кому (100,500). Створи свій персональний бекенд для розробки
-   за допомогою UI-сервісу [mockapo.io] (https://mockapi.io/).
+1. According to [layout]
+   (https://www.figma.com/file/zun1oP6NmS2Lmgbcj6e1IG/Test?node-id=0-1) required
+   implement user cards.
+2. When clicking on the Follow button, the text changes to Following. Also the
+   color of the button changes. And yours is added to the number of followers.
+   That is, the initial number is 100,500 followers. When you click on the
+   button it will be 100,501.
+3. When the page is updated, the final result of the user's actions should be
+   recorded. That is, if you click on the button and refresh the page, the
+   button remains the same in the Following state with the corresponding color,
+   and the follower count is NOT decreases to the initial value.
+4. When you click the button again, its text and color change to the original
+   state The number of followers also changes. It decreases by 1 (100,500).
+5. In the code, the number 100,500 must be written with one value (100500). In
+   the UI - comma-delimited (100,500). Create your personal backend for
+   development using UI service [mockapo.io] (https://mockapi.io/).
 
-Створи ресурс users. Використай конструктор ресурсу та опиши об'єкт юзера, як
-описано нижче.
+Create the users resource. Use the resource constructor and describe the user
+object as described below.
 
-# Юзер
+# User
 
-1. Створюєте юзера в Mockapi з наступними полями: id, user, tweets, followers,
-   avatar (див скріншот нижче). 2.Зображення аватарів мають бути прописані
-   окремими url у властивості “avatar”. Можете підібрати їх самостійно.
-2. Має бути від 12 юзерів з різними значеннями(на ваш розсуд) в базі. Зроби
-   пагінацію. На одній сторінці пагінації має відображатися від 3 твітів, решта
-   підгружатись при натисканні Load More.
-3. Решта вимог аналогічні до вищеописаного технічного завдання.
+1. Create a user in Mockapi with the following fields: id, user, tweets,
+   followers, avatar (see screenshot below). 2. Images of avatars must be
+   registered separate urls in the "avatar" property. You can choose them
+   yourself.
+2. There should be from 12 users with different values (at your discretion) in
+   the database. do it pagination One pagination page should display at least 3
+   tweets, the rest to load when pressing Load More.
+3. The rest of the requirements are similar to the technical task described
+   above.
 
 (https://textbook.edu.goit.global/lms-career-homework/uk/img/image-2.jpg)
 
-# Додаткове завдання
+# Additional task
 
-За виконання вам будуть нараховані додаткові бали! Без виконання додаткового
-завдання ви не зможете отримати максимальний бал.
+You will be awarded additional points for performance! Without performing
+additional task you will not be able to get the maximum score.
 
-Створи маршрутизацію, використовуючи React Router.
+Create routing using React Router.
 
-У застосунку повинні бути такі маршрути. Якщо користувач зайшов за неіснуючим
-маршрутом, його необхідно перенаправляти на домашню сторінку. '/' – компонент
-Home, домашня сторінка. Стилізація та оформлення на ваш розсуд '/tweets' -
-компонент tweets, сторінка із відображенням твітів На сторінці tweets має бути
-кнопка Back, яка веде на головну сторінку.
+The application must have the following routes. If the user entered for a
+non-existent one route, it must be redirected to the home page. '/' is a
+component Home, home page. Styling and design at your discretion '/tweets' -
+component tweets, a page displaying tweets The tweets page should have the Back
+button, which leads to the main page.
 
-Завдання із зірочкою
+Tasks with an asterisk
 
-Додай фільтрацію. Це має бути Dropdown із 3 опціями(оформлення на ваш розсуд):
-show all, follow, followings show all - показати всі твіти. follow - показати
-твіти, у яких стан follow. followings - показати твіти, у яких стан following.
+Add filtering. It should be a Dropdown with 3 options (design at your
+discretion): show all, follow, followings show all - show all tweets. follow -
+show tweets with the follow status. followings - show tweets with following
+status.
